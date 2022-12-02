@@ -1,0 +1,7 @@
+platform :ios, '15.0'
+use_frameworks!
+
+target 'NFTMarketplace' do
+  pod 'WalletConnectSwift'
+  pod 'Alamofire'
+end
