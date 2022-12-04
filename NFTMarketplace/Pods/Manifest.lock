@@ -1,24 +1,28 @@
 PODS:
   - Alamofire (5.6.2)
   - CryptoSwift (1.6.0)
+  - Kingfisher (7.4.1)
   - WalletConnectSwift (1.7.0):
     - CryptoSwift (~> 1.5)
 
 DEPENDENCIES:
   - Alamofire
+  - Kingfisher (~> 7.0)
   - WalletConnectSwift
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - CryptoSwift
+    - Kingfisher
     - WalletConnectSwift
 
 SPEC CHECKSUMS:
   Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
   CryptoSwift: 562f8eceb40e80796fffc668b0cad9313284cfa6
+  Kingfisher: cd762a593a61b2fbecf7645c00f9a801a3ebfc9c
   WalletConnectSwift: 6309bf3011b0b30e3e9d1e7449535302a9240f71
 
-PODFILE CHECKSUM: 147ae52d3ad5cb314e8080c7ddbbf2ad116f3dfe
+PODFILE CHECKSUM: 2be46c1d3200b619385402c41ef5cdc462910d7c
 
 COCOAPODS: 1.11.3

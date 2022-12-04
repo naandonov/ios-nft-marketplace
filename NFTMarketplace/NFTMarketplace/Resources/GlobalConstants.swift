@@ -18,9 +18,9 @@ enum GlobalConstants {
     static let nftContractAddress = "0xC84C09c43442d397B6dec6Ca684928b351833725"
     static let nftMarketplaceContractAddress = "0xE29Caee6f089577b405061a16516b36cE1CABdB2"
     
-    static let contractOwnerPublicAddress = "0x3D1bf2A5EFE4be1D0EFeD337eda3a90B925Ab163"
+    static let contractOwnerPublicAddress = ""
     static let emptyAddress = "0x0000000000000000000000000000000000000000"
     
     static let openAPIHost = "https://api.openai.com"
-    static let openAPIKey = ""
+    static let openAPIKey = "sk-"
 }

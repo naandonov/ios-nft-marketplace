@@ -101,14 +101,14 @@ extension ViewController: Web3CoordinatorDelegate {
 //
 //        })
         
-        Web3Coordinator.sharedInstance.getNFTItems(collectionID: 1) { response in
-            switch response {
-            case .success(let value):
-                print(value)
-            case .failure(let error):
-                print(error)
-            }
-        }
+//        Web3Coordinator.sharedInstance.getNFTItems(collectionID: 1) { response in
+//            switch response {
+//            case .success(let value):
+//                print(value)
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
     }
     
     func didDisconnect() {

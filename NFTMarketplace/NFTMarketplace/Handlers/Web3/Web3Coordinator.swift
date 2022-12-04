@@ -40,7 +40,7 @@ final class Web3Coordinator {
         walletConnectHandler.delegate = self
     }
     
-    private var isWalletConnected: Bool {
+    var isWalletConnected: Bool {
         return walletConnectHandler.sessionExists
     }
     

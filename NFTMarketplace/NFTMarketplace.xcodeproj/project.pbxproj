@@ -35,6 +35,14 @@
 		8CBCD07E293BACD400D1EF20 /* NFTCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCD07D293BACD400D1EF20 /* NFTCollection.swift */; };
 		8CBCD0AA293C26D500D1EF20 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCD0A9293C26D400D1EF20 /* Token.swift */; };
 		8CBCD0AC293C47D800D1EF20 /* NFTItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCD0AB293C47D800D1EF20 /* NFTItem.swift */; };
+		8CBCD0B0293CDD1B00D1EF20 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCD0AF293CDD1B00D1EF20 /* MainTabBarController.swift */; };
+		8CBCD0B5293CE0A200D1EF20 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCD0B4293CE0A200D1EF20 /* AuthenticationViewController.swift */; };
+		8CBCD0B7293CE17F00D1EF20 /* UIBoarderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCD0B6293CE17F00D1EF20 /* UIBoarderView.swift */; };
+		8CBCD0B9293CEA9100D1EF20 /* UIView+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCD0B8293CEA9100D1EF20 /* UIView+Loading.swift */; };
+		8CBCD0BB293CEAC700D1EF20 /* UIColor+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCD0BA293CEAC700D1EF20 /* UIColor+Utilities.swift */; };
+		8CBCD0BE293CFDFC00D1EF20 /* CreateNFTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCD0BD293CFDFC00D1EF20 /* CreateNFTViewController.swift */; };
+		8CBCD0C2293D3E9400D1EF20 /* InventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCD0C1293D3E9400D1EF20 /* InventoryViewController.swift */; };
+		8CBCD0C4293D421B00D1EF20 /* InventoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCD0C3293D421B00D1EF20 /* InventoryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +74,14 @@
 		8CBCD07D293BACD400D1EF20 /* NFTCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTCollection.swift; sourceTree = "<group>"; };
 		8CBCD0A9293C26D400D1EF20 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		8CBCD0AB293C47D800D1EF20 /* NFTItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTItem.swift; sourceTree = "<group>"; };
+		8CBCD0AF293CDD1B00D1EF20 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		8CBCD0B4293CE0A200D1EF20 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		8CBCD0B6293CE17F00D1EF20 /* UIBoarderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBoarderView.swift; sourceTree = "<group>"; };
+		8CBCD0B8293CEA9100D1EF20 /* UIView+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Loading.swift"; sourceTree = "<group>"; };
+		8CBCD0BA293CEAC700D1EF20 /* UIColor+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Utilities.swift"; sourceTree = "<group>"; };
+		8CBCD0BD293CFDFC00D1EF20 /* CreateNFTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNFTViewController.swift; sourceTree = "<group>"; };
+		8CBCD0C1293D3E9400D1EF20 /* InventoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryViewController.swift; sourceTree = "<group>"; };
+		8CBCD0C3293D421B00D1EF20 /* InventoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryTableViewCell.swift; sourceTree = "<group>"; };
 		B68A9B0FCF909FEAC11302C6 /* Pods_NFTMarketplace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NFTMarketplace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2164AB307283DF6E89DA56 /* Pods-NFTMarketplace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NFTMarketplace.debug.xcconfig"; path = "Target Support Files/Pods-NFTMarketplace/Pods-NFTMarketplace.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,6 +129,7 @@
 		8CBCD03129394EF700D1EF20 /* NFTMarketplace */ = {
 			isa = PBXGroup;
 			children = (
+				8CBCD0AD293CDA8E00D1EF20 /* Application */,
 				8CBCD05829396CFA00D1EF20 /* Utilities */,
 				8CBCD04D29395B7400D1EF20 /* Handlers */,
 				8CBCD04A293950A200D1EF20 /* Resources */,
@@ -155,6 +172,9 @@
 			children = (
 				8CBCD05629396CEE00D1EF20 /* String+Utilities.swift */,
 				8CBCD07A293BA65700D1EF20 /* Encodable+Utilities.swift */,
+				8CBCD0B6293CE17F00D1EF20 /* UIBoarderView.swift */,
+				8CBCD0B8293CEA9100D1EF20 /* UIView+Loading.swift */,
+				8CBCD0BA293CEAC700D1EF20 /* UIColor+Utilities.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -189,6 +209,50 @@
 				8CBCD0AB293C47D800D1EF20 /* NFTItem.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		8CBCD0AD293CDA8E00D1EF20 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				8CBCD0C0293D3E5A00D1EF20 /* Inventory */,
+				8CBCD0BC293CFDE500D1EF20 /* CreateNFT */,
+				8CBCD0B1293CDED100D1EF20 /* Authentication */,
+				8CBCD0AE293CDCD800D1EF20 /* MainTabController */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		8CBCD0AE293CDCD800D1EF20 /* MainTabController */ = {
+			isa = PBXGroup;
+			children = (
+				8CBCD0AF293CDD1B00D1EF20 /* MainTabBarController.swift */,
+			);
+			path = MainTabController;
+			sourceTree = "<group>";
+		};
+		8CBCD0B1293CDED100D1EF20 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				8CBCD0B4293CE0A200D1EF20 /* AuthenticationViewController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		8CBCD0BC293CFDE500D1EF20 /* CreateNFT */ = {
+			isa = PBXGroup;
+			children = (
+				8CBCD0BD293CFDFC00D1EF20 /* CreateNFTViewController.swift */,
+			);
+			path = CreateNFT;
+			sourceTree = "<group>";
+		};
+		8CBCD0C0293D3E5A00D1EF20 /* Inventory */ = {
+			isa = PBXGroup;
+			children = (
+				8CBCD0C1293D3E9400D1EF20 /* InventoryViewController.swift */,
+				8CBCD0C3293D421B00D1EF20 /* InventoryTableViewCell.swift */,
+			);
+			path = Inventory;
 			sourceTree = "<group>";
 		};
 		F3805C6ED8C052ED63A4596B /* Pods */ = {
@@ -324,11 +388,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CBCD0BB293CEAC700D1EF20 /* UIColor+Utilities.swift in Sources */,
+				8CBCD0C2293D3E9400D1EF20 /* InventoryViewController.swift in Sources */,
 				8CBCD05529395FA600D1EF20 /* IPFSHandler.swift in Sources */,
+				8CBCD0B5293CE0A200D1EF20 /* AuthenticationViewController.swift in Sources */,
+				8CBCD0C4293D421B00D1EF20 /* InventoryTableViewCell.swift in Sources */,
 				8CBCD03729394EF700D1EF20 /* ViewController.swift in Sources */,
 				8CBCD05F2939844E00D1EF20 /* ImageGenerationRequest.swift in Sources */,
 				8CBCD07B293BA65700D1EF20 /* Encodable+Utilities.swift in Sources */,
 				8CBCD074293B729700D1EF20 /* Web3TransactionsHandler.swift in Sources */,
+				8CBCD0B7293CE17F00D1EF20 /* UIBoarderView.swift in Sources */,
 				8CBCD05729396CEE00D1EF20 /* String+Utilities.swift in Sources */,
 				8CBCD079293B997B00D1EF20 /* Web3Coordinator.swift in Sources */,
 				8CBCD03329394EF700D1EF20 /* AppDelegate.swift in Sources */,
@@ -339,9 +408,12 @@
 				8CBCD04C293950FB00D1EF20 /* GlobalConstants.swift in Sources */,
 				8CBCD0612939854900D1EF20 /* ImageGenerationResult.swift in Sources */,
 				8CBCD04F29395B9E00D1EF20 /* NetworkingManager.swift in Sources */,
+				8CBCD0B9293CEA9100D1EF20 /* UIView+Loading.swift in Sources */,
 				8CBCD0AC293C47D800D1EF20 /* NFTItem.swift in Sources */,
 				8CBCD0AA293C26D500D1EF20 /* Token.swift in Sources */,
+				8CBCD0B0293CDD1B00D1EF20 /* MainTabBarController.swift in Sources */,
 				8CBCD06E293A7EE800D1EF20 /* WalletConnectHandler.swift in Sources */,
+				8CBCD0BE293CFDFC00D1EF20 /* CreateNFTViewController.swift in Sources */,
 				8CBCD072293AB5A500D1EF20 /* SecureStorageManager.swift in Sources */,
 				8CBCD03529394EF700D1EF20 /* SceneDelegate.swift in Sources */,
 			);
@@ -494,11 +566,14 @@
 				DEVELOPMENT_TEAM = 7KX2K9CJ54;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NFTMarketplace/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Pandamonium;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -523,11 +598,14 @@
 				DEVELOPMENT_TEAM = 7KX2K9CJ54;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NFTMarketplace/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Pandamonium;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
