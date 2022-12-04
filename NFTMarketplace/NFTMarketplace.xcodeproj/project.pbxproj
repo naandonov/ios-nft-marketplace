@@ -24,6 +24,17 @@
 		8CBCD0612939854900D1EF20 /* ImageGenerationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCD0602939854900D1EF20 /* ImageGenerationResult.swift */; };
 		8CBCD06429398DC700D1EF20 /* Web3 in Frameworks */ = {isa = PBXBuildFile; productRef = 8CBCD06329398DC700D1EF20 /* Web3 */; };
 		8CBCD06629398DC700D1EF20 /* Web3ContractABI in Frameworks */ = {isa = PBXBuildFile; productRef = 8CBCD06529398DC700D1EF20 /* Web3ContractABI */; };
+		8CBCD06829398EA000D1EF20 /* nftABI.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CBCD06729398EA000D1EF20 /* nftABI.json */; };
+		8CBCD06C29398ECE00D1EF20 /* nftMarketplaceABI.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CBCD06B29398ECE00D1EF20 /* nftMarketplaceABI.json */; };
+		8CBCD06E293A7EE800D1EF20 /* WalletConnectHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCD06D293A7EE800D1EF20 /* WalletConnectHandler.swift */; };
+		8CBCD072293AB5A500D1EF20 /* SecureStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCD071293AB5A500D1EF20 /* SecureStorageManager.swift */; };
+		8CBCD074293B729700D1EF20 /* Web3TransactionsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCD073293B729700D1EF20 /* Web3TransactionsHandler.swift */; };
+		8CBCD077293B767000D1EF20 /* Web3DataComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCD076293B767000D1EF20 /* Web3DataComposer.swift */; };
+		8CBCD079293B997B00D1EF20 /* Web3Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCD078293B997B00D1EF20 /* Web3Coordinator.swift */; };
+		8CBCD07B293BA65700D1EF20 /* Encodable+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCD07A293BA65700D1EF20 /* Encodable+Utilities.swift */; };
+		8CBCD07E293BACD400D1EF20 /* NFTCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCD07D293BACD400D1EF20 /* NFTCollection.swift */; };
+		8CBCD0AA293C26D500D1EF20 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCD0A9293C26D400D1EF20 /* Token.swift */; };
+		8CBCD0AC293C47D800D1EF20 /* NFTItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCD0AB293C47D800D1EF20 /* NFTItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +55,17 @@
 		8CBCD05C2939838300D1EF20 /* OpenAPIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAPIHandler.swift; sourceTree = "<group>"; };
 		8CBCD05E2939844E00D1EF20 /* ImageGenerationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGenerationRequest.swift; sourceTree = "<group>"; };
 		8CBCD0602939854900D1EF20 /* ImageGenerationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGenerationResult.swift; sourceTree = "<group>"; };
+		8CBCD06729398EA000D1EF20 /* nftABI.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = nftABI.json; sourceTree = "<group>"; };
+		8CBCD06B29398ECE00D1EF20 /* nftMarketplaceABI.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = nftMarketplaceABI.json; sourceTree = "<group>"; };
+		8CBCD06D293A7EE800D1EF20 /* WalletConnectHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletConnectHandler.swift; sourceTree = "<group>"; };
+		8CBCD071293AB5A500D1EF20 /* SecureStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStorageManager.swift; sourceTree = "<group>"; };
+		8CBCD073293B729700D1EF20 /* Web3TransactionsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Web3TransactionsHandler.swift; sourceTree = "<group>"; };
+		8CBCD076293B767000D1EF20 /* Web3DataComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Web3DataComposer.swift; sourceTree = "<group>"; };
+		8CBCD078293B997B00D1EF20 /* Web3Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Web3Coordinator.swift; sourceTree = "<group>"; };
+		8CBCD07A293BA65700D1EF20 /* Encodable+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Utilities.swift"; sourceTree = "<group>"; };
+		8CBCD07D293BACD400D1EF20 /* NFTCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTCollection.swift; sourceTree = "<group>"; };
+		8CBCD0A9293C26D400D1EF20 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		8CBCD0AB293C47D800D1EF20 /* NFTItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTItem.swift; sourceTree = "<group>"; };
 		B68A9B0FCF909FEAC11302C6 /* Pods_NFTMarketplace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NFTMarketplace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2164AB307283DF6E89DA56 /* Pods-NFTMarketplace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NFTMarketplace.debug.xcconfig"; path = "Target Support Files/Pods-NFTMarketplace/Pods-NFTMarketplace.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				8CBCD04B293950FB00D1EF20 /* GlobalConstants.swift */,
+				8CBCD06729398EA000D1EF20 /* nftABI.json */,
+				8CBCD06B29398ECE00D1EF20 /* nftMarketplaceABI.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -116,10 +140,12 @@
 		8CBCD04D29395B7400D1EF20 /* Handlers */ = {
 			isa = PBXGroup;
 			children = (
+				8CBCD075293B74AC00D1EF20 /* Web3 */,
 				8CBCD05929396D0D00D1EF20 /* Models */,
 				8CBCD04E29395B9E00D1EF20 /* NetworkingManager.swift */,
 				8CBCD05429395FA600D1EF20 /* IPFSHandler.swift */,
 				8CBCD05C2939838300D1EF20 /* OpenAPIHandler.swift */,
+				8CBCD071293AB5A500D1EF20 /* SecureStorageManager.swift */,
 			);
 			path = Handlers;
 			sourceTree = "<group>";
@@ -128,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				8CBCD05629396CEE00D1EF20 /* String+Utilities.swift */,
+				8CBCD07A293BA65700D1EF20 /* Encodable+Utilities.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -138,6 +165,28 @@
 				8CBCD05A29396D3300D1EF20 /* IPFSResult.swift */,
 				8CBCD05E2939844E00D1EF20 /* ImageGenerationRequest.swift */,
 				8CBCD0602939854900D1EF20 /* ImageGenerationResult.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8CBCD075293B74AC00D1EF20 /* Web3 */ = {
+			isa = PBXGroup;
+			children = (
+				8CBCD07C293BACC900D1EF20 /* Models */,
+				8CBCD073293B729700D1EF20 /* Web3TransactionsHandler.swift */,
+				8CBCD06D293A7EE800D1EF20 /* WalletConnectHandler.swift */,
+				8CBCD076293B767000D1EF20 /* Web3DataComposer.swift */,
+				8CBCD078293B997B00D1EF20 /* Web3Coordinator.swift */,
+			);
+			path = Web3;
+			sourceTree = "<group>";
+		};
+		8CBCD07C293BACC900D1EF20 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8CBCD07D293BACD400D1EF20 /* NFTCollection.swift */,
+				8CBCD0A9293C26D400D1EF20 /* Token.swift */,
+				8CBCD0AB293C47D800D1EF20 /* NFTItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -221,6 +270,8 @@
 				8CBCD03F29394EF900D1EF20 /* LaunchScreen.storyboard in Resources */,
 				8CBCD03C29394EF900D1EF20 /* Assets.xcassets in Resources */,
 				8CBCD03A29394EF700D1EF20 /* Main.storyboard in Resources */,
+				8CBCD06829398EA000D1EF20 /* nftABI.json in Resources */,
+				8CBCD06C29398ECE00D1EF20 /* nftMarketplaceABI.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,13 +327,22 @@
 				8CBCD05529395FA600D1EF20 /* IPFSHandler.swift in Sources */,
 				8CBCD03729394EF700D1EF20 /* ViewController.swift in Sources */,
 				8CBCD05F2939844E00D1EF20 /* ImageGenerationRequest.swift in Sources */,
+				8CBCD07B293BA65700D1EF20 /* Encodable+Utilities.swift in Sources */,
+				8CBCD074293B729700D1EF20 /* Web3TransactionsHandler.swift in Sources */,
 				8CBCD05729396CEE00D1EF20 /* String+Utilities.swift in Sources */,
+				8CBCD079293B997B00D1EF20 /* Web3Coordinator.swift in Sources */,
 				8CBCD03329394EF700D1EF20 /* AppDelegate.swift in Sources */,
+				8CBCD077293B767000D1EF20 /* Web3DataComposer.swift in Sources */,
 				8CBCD05D2939838300D1EF20 /* OpenAPIHandler.swift in Sources */,
+				8CBCD07E293BACD400D1EF20 /* NFTCollection.swift in Sources */,
 				8CBCD05B29396D3300D1EF20 /* IPFSResult.swift in Sources */,
 				8CBCD04C293950FB00D1EF20 /* GlobalConstants.swift in Sources */,
 				8CBCD0612939854900D1EF20 /* ImageGenerationResult.swift in Sources */,
 				8CBCD04F29395B9E00D1EF20 /* NetworkingManager.swift in Sources */,
+				8CBCD0AC293C47D800D1EF20 /* NFTItem.swift in Sources */,
+				8CBCD0AA293C26D500D1EF20 /* Token.swift in Sources */,
+				8CBCD06E293A7EE800D1EF20 /* WalletConnectHandler.swift in Sources */,
+				8CBCD072293AB5A500D1EF20 /* SecureStorageManager.swift in Sources */,
 				8CBCD03529394EF700D1EF20 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,7 +419,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -413,7 +473,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
