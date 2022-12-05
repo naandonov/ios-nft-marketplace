@@ -9,5 +9,6 @@ import Foundation
 
 struct Token: Decodable {
     let tokenURI: String
+    let tokenID: Int
     let wasListed: Bool
 }

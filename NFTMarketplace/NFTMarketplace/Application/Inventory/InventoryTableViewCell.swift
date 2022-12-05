@@ -14,5 +14,9 @@ class InventoryTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    
+    override func prepareForReuse() {
+        sellButton.tintColor = .systemMint
+    }
 
 }

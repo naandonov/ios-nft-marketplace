@@ -6,15 +6,17 @@
 //
 
 import UIKit
+import BigInt
 
 protocol Web3DataSourceUpdatable {
     func didUpdateWeb3DataSource(_ dataSource: Web3DataSource)
 }
 
 struct Web3DataSource {
-    var ownedTokens: [Token] = []
-    var collections: [NFTCollection] = []
-    var listedNFTItems: [NFTComposedItem] = []
+    let listingPrice: BigUInt
+    let ownedTokens: [Token]
+    let collections: [NFTCollection]
+    let listedNFTItems: [NFTComposedItem]
 }
 
 class MainTabBarController: UITabBarController {
@@ -25,6 +27,8 @@ class MainTabBarController: UITabBarController {
         return storyboard?.instantiateViewController(withIdentifier: "AuthenticationViewController") as? AuthenticationViewController
     }()
     private var createNFTViewController: CreateNFTViewController?
+    private var inventoryViewController: InventoryViewController?
+    private var marketViewController: MarketViewController?
     
     private var web3DataSource: Web3DataSource?
     private lazy var overlayView: UIView = {
@@ -53,6 +57,12 @@ class MainTabBarController: UITabBarController {
             if let createNFTViewController = viewController as? CreateNFTViewController {
                 self.createNFTViewController = createNFTViewController
                 self.createNFTViewController?.delegate = self
+            } else if let inventoryViewController = viewController as? InventoryViewController {
+                self.inventoryViewController = inventoryViewController
+                self.inventoryViewController?.delegate = self
+            } else if let marketViewController = viewController as? MarketViewController {
+                self.marketViewController = marketViewController
+                self.marketViewController?.delegate = self
             }
         }
     }
@@ -86,6 +96,15 @@ class MainTabBarController: UITabBarController {
             group.leave()
         })
         
+        var listingPrice = BigUInt.zero
+        group.enter()
+        web3Coordinator.getListingFee(completion: { response in
+            if case let .success(result) = response {
+                listingPrice = result
+            }
+            group.leave()
+        })
+        
         var collections: [NFTCollection] = []
         group.enter()
         web3Coordinator.getAllNFTCollections(completion: { response in
@@ -96,11 +115,11 @@ class MainTabBarController: UITabBarController {
         })
     
         group.notify(queue: .main) { [weak self] in
-            self?.loadWeb3DataSourceItemsSegregation(tokens: tokens, collections: collections)
+            self?.loadWeb3DataSourceItemsSegregation(tokens: tokens, collections: collections, listingPrice: listingPrice)
         }
     }
     
-    private func loadWeb3DataSourceItemsSegregation(tokens: [Token], collections: [NFTCollection]) {
+    private func loadWeb3DataSourceItemsSegregation(tokens: [Token], collections: [NFTCollection], listingPrice: BigUInt) {
         let group = DispatchGroup()
         let subGroup = DispatchGroup()
 
@@ -130,7 +149,8 @@ class MainTabBarController: UITabBarController {
         }
         
         group.notify(queue: .main) { [weak self] in
-            let web3DataSource = Web3DataSource(ownedTokens: tokens,
+            let web3DataSource = Web3DataSource(listingPrice: listingPrice,
+                                                ownedTokens: tokens,
                                                 collections: collections,
                                                 listedNFTItems: items)
             self?.web3DataSource = web3DataSource
@@ -197,11 +217,13 @@ extension MainTabBarController: CreateNFTViewControllerDelegate {
             switch response {
             case .success(let result):
                 self?.web3Coordinator.createToken(tokenURI: result.uri, completion: { response in
-                    if case .failure = response {
-                        self?.triggerErrorAlert()
-                    }
-                    
                     DispatchQueue.main.async {
+                        if case .failure = response {
+                            self?.triggerErrorAlert()
+                            self?.view.stopLoadingIndicator()
+                            return
+                        }
+                        
                         self?.view.stopLoadingIndicator()
                         self?.openSuccessAlert(title: "Token was successfully created")
                         self?.createNFTViewController?.invalidateContent()
@@ -210,6 +232,53 @@ extension MainTabBarController: CreateNFTViewControllerDelegate {
                 
             case .failure:
                 self?.triggerErrorAlert()
+            }
+        })
+    }
+}
+
+extension MainTabBarController: InventoryViewControllerDelegate {
+    func requestDataSourceRefresh() {
+        loadWeb3DataSource()
+    }
+    
+    func didListItem(with tokenID: Int, price: BigUInt, collectionID: Int) {
+        guard let listingPrice = web3DataSource?.listingPrice else {
+            triggerErrorAlert()
+            return
+        }
+        view.startLoadingIndicator()
+        web3Coordinator.listNFTForSale(tokenID: tokenID,
+                                       price: price,
+                                       collectionID: collectionID,
+                                       value: listingPrice, completion: { [weak self] response in
+            DispatchQueue.main.async {
+                if case .failure = response {
+                    self?.triggerErrorAlert()
+                    self?.view.stopLoadingIndicator()
+                }
+                
+                self?.view.stopLoadingIndicator()
+                self?.openSuccessAlert(title: "NFT listing successfully created")
+            }
+        })
+    }
+}
+
+extension MainTabBarController: MarketViewControllerDelegate {
+    func didRequestBuy(for item: NFTComposedItem) {
+        view.startLoadingIndicator()
+        web3Coordinator.buyNFT(tokenID: item.itemID,
+                               value: BigUInt(item.price),
+                               completion: { response in
+            DispatchQueue.main.async { [weak self] in
+                if case .failure = response {
+                    self?.triggerErrorAlert()
+                    self?.view.stopLoadingIndicator()
+                }
+                
+                self?.view.stopLoadingIndicator()
+                self?.openSuccessAlert(title: "Purchase completed")
             }
         })
     }
