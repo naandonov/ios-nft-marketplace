@@ -10,7 +10,6 @@
 		4EB7007DC40B99ED08C0869A /* Pods_NFTMarketplace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B68A9B0FCF909FEAC11302C6 /* Pods_NFTMarketplace.framework */; };
 		8CBCD03329394EF700D1EF20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCD03229394EF700D1EF20 /* AppDelegate.swift */; };
 		8CBCD03529394EF700D1EF20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCD03429394EF700D1EF20 /* SceneDelegate.swift */; };
-		8CBCD03729394EF700D1EF20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCD03629394EF700D1EF20 /* ViewController.swift */; };
 		8CBCD03A29394EF700D1EF20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CBCD03829394EF700D1EF20 /* Main.storyboard */; };
 		8CBCD03C29394EF900D1EF20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CBCD03B29394EF900D1EF20 /* Assets.xcassets */; };
 		8CBCD03F29394EF900D1EF20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CBCD03D29394EF900D1EF20 /* LaunchScreen.storyboard */; };
@@ -53,7 +52,6 @@
 		8CBCD02F29394EF700D1EF20 /* NFTMarketplace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NFTMarketplace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CBCD03229394EF700D1EF20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CBCD03429394EF700D1EF20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8CBCD03629394EF700D1EF20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8CBCD03929394EF700D1EF20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8CBCD03B29394EF900D1EF20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CBCD03E29394EF900D1EF20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -141,7 +139,6 @@
 				8CBCD04A293950A200D1EF20 /* Resources */,
 				8CBCD03229394EF700D1EF20 /* AppDelegate.swift */,
 				8CBCD03429394EF700D1EF20 /* SceneDelegate.swift */,
-				8CBCD03629394EF700D1EF20 /* ViewController.swift */,
 				8CBCD03829394EF700D1EF20 /* Main.storyboard */,
 				8CBCD03B29394EF900D1EF20 /* Assets.xcassets */,
 				8CBCD03D29394EF900D1EF20 /* LaunchScreen.storyboard */,
@@ -411,7 +408,6 @@
 				8CBCD0B5293CE0A200D1EF20 /* AuthenticationViewController.swift in Sources */,
 				8CBCD0C4293D421B00D1EF20 /* InventoryTableViewCell.swift in Sources */,
 				8CBCD0C7293D7B0900D1EF20 /* MarketViewController.swift in Sources */,
-				8CBCD03729394EF700D1EF20 /* ViewController.swift in Sources */,
 				8CBCD05F2939844E00D1EF20 /* ImageGenerationRequest.swift in Sources */,
 				8CBCD07B293BA65700D1EF20 /* Encodable+Utilities.swift in Sources */,
 				8CBCD074293B729700D1EF20 /* Web3TransactionsHandler.swift in Sources */,

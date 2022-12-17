@@ -131,6 +131,11 @@ extension WalletConnectHandler: ClientDelegate {
     }
 
     func client(_ client: Client, didConnect session: Session) {
+        guard let walletInfo = session.walletInfo,
+              walletInfo.approved else {
+            disconnectIfPossible()
+            return
+        }
         SecureStorageManager.sharedInstance.save(session,
                                                  service: Constants.sessionStorageService,
                                                  account: Constants.sessionStorageAccount)

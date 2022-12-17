@@ -109,13 +109,15 @@ final class Web3DataComposer {
         self.ownerAddress = ownerAddress
     }
     
+    // MARK: - Encoding
+    
     func generateCallRequestHexData(for functionMethod: FunctionMethod) -> String? {
         let abiData = abiData(for: functionMethod.contract)
         guard let contract = try? web3.eth.Contract(json: abiData, abiKey: nil, address: ownerAddress),
               let functionInvocation = contract[name: functionMethod.name, isReadOnly: true] else {
             return nil
         }
-                
+        
         let transaction = functionInvocation(functionMethod.parameters).createCall()
         return transaction?.data?.hex()
     }
@@ -136,6 +138,16 @@ final class Web3DataComposer {
                                                                                           accessList: [:],
                                                                                           transactionType: .legacy)
         return transaction?.data.hex()
+    }
+    
+    // MARK: - Decoding
+    
+    func decodeUInt256(from value: String) -> BigUInt? {
+        return try? ABI.decodeParameter(type: .uint256, from: value) as? BigUInt
+    }
+    
+    func decodeString(from value: String) -> String? {
+        return try? ABI.decodeParameter(type: .string, from: value) as? String
     }
 }
 

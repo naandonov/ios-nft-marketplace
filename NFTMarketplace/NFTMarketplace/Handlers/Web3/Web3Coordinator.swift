@@ -158,10 +158,10 @@ extension Web3Coordinator {
                                             to: functionMethod.contract.address,
                                             from: nil),
                                 pairingURI: pairingURI,
-                                completion: { (response: Result<String, Error>) in
+                                completion: { [weak dataComposer] (response: Result<String, Error>) in
             switch response {
             case .success(let value):
-                guard let result = try? ABI.decodeParameter(type: .uint256, from: value) as? BigUInt else {
+                guard let result = dataComposer?.decodeUInt256(from: value) else {
                     completion(.failure(CustomError.parsingError))
                     return
                 }
@@ -185,10 +185,10 @@ extension Web3Coordinator {
                                             to: functionMethod.contract.address,
                                             from: walletAddress),
                                 pairingURI: pairingURI,
-                                completion: { (response: Result<String, Error>) in
+                                completion: { [weak dataComposer] (response: Result<String, Error>) in
             switch response {
             case .success(let value):
-                guard let json = try? ABI.decodeParameter(type: .string, from: value) as? String,
+                guard let json = dataComposer?.decodeString(from: value),
                       let jsonData = json.data(using: .utf8),
                       let deserializedData = try? JSONDecoder().decode([Token].self, from: jsonData) else {
                     completion(.failure(CustomError.parsingError))
@@ -212,10 +212,10 @@ extension Web3Coordinator {
                                             to: functionMethod.contract.address,
                                             from: nil),
                                 pairingURI: pairingURI,
-                                completion: { (response: Result<String, Error>) in
+                                completion: { [weak dataComposer] (response: Result<String, Error>) in
             switch response {
             case .success(let value):
-                guard let result = try? ABI.decodeParameter(type: .string, from: value) as? String else {
+                guard let result = dataComposer?.decodeString(from: value) else {
                     completion(.failure(CustomError.parsingError))
                     return
                 }
@@ -299,10 +299,10 @@ extension Web3Coordinator {
                                             to: functionMethod.contract.address,
                                             from: walletAddress),
                                 pairingURI: pairingURI,
-                                completion: { (response: Result<String, Error>) in
+                                completion: { [weak dataComposer] (response: Result<String, Error>) in
             switch response {
             case .success(let value):
-                guard let json = try? ABI.decodeParameter(type: .string, from: value) as? String,
+                guard let json = dataComposer?.decodeString(from: value),
                       let jsonData = json.data(using: .utf8),
                       let deserializedData = try? JSONDecoder().decode([NFTItem].self, from: jsonData) else {
                     completion(.failure(CustomError.parsingError))
