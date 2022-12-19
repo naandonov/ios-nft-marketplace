@@ -235,6 +235,22 @@ extension MainTabBarController: CreateNFTViewControllerDelegate {
             }
         })
     }
+    
+    func requestCollectionCreation(with name: String) {
+        view.startLoadingIndicator()
+        web3Coordinator.createNFTCollection(name: name, completion: { [weak self] response in
+            DispatchQueue.main.async {
+                if case .failure = response {
+                    self?.triggerErrorAlert()
+                    self?.view.stopLoadingIndicator()
+                }
+                
+                self?.view.stopLoadingIndicator()
+                self?.openSuccessAlert(title: "NFT collection successfully created")
+                self?.requestDataSourceRefresh()
+            }
+        })
+    }
 }
 
 extension MainTabBarController: InventoryViewControllerDelegate {
