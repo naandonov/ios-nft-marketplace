@@ -25,7 +25,7 @@
 		8CBCD06629398DC700D1EF20 /* Web3ContractABI in Frameworks */ = {isa = PBXBuildFile; productRef = 8CBCD06529398DC700D1EF20 /* Web3ContractABI */; };
 		8CBCD06829398EA000D1EF20 /* nftABI.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CBCD06729398EA000D1EF20 /* nftABI.json */; };
 		8CBCD06C29398ECE00D1EF20 /* nftMarketplaceABI.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CBCD06B29398ECE00D1EF20 /* nftMarketplaceABI.json */; };
-		8CBCD06E293A7EE800D1EF20 /* WalletConnectHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCD06D293A7EE800D1EF20 /* WalletConnectHandler.swift */; };
+		8CBCD06E293A7EE800D1EF20 /* Web3AuthenticationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCD06D293A7EE800D1EF20 /* Web3AuthenticationHandler.swift */; };
 		8CBCD072293AB5A500D1EF20 /* SecureStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCD071293AB5A500D1EF20 /* SecureStorageManager.swift */; };
 		8CBCD074293B729700D1EF20 /* Web3TransactionsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCD073293B729700D1EF20 /* Web3TransactionsHandler.swift */; };
 		8CBCD077293B767000D1EF20 /* Web3DataComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCD076293B767000D1EF20 /* Web3DataComposer.swift */; };
@@ -66,7 +66,7 @@
 		8CBCD0602939854900D1EF20 /* ImageGenerationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGenerationResult.swift; sourceTree = "<group>"; };
 		8CBCD06729398EA000D1EF20 /* nftABI.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = nftABI.json; sourceTree = "<group>"; };
 		8CBCD06B29398ECE00D1EF20 /* nftMarketplaceABI.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = nftMarketplaceABI.json; sourceTree = "<group>"; };
-		8CBCD06D293A7EE800D1EF20 /* WalletConnectHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletConnectHandler.swift; sourceTree = "<group>"; };
+		8CBCD06D293A7EE800D1EF20 /* Web3AuthenticationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Web3AuthenticationHandler.swift; sourceTree = "<group>"; };
 		8CBCD071293AB5A500D1EF20 /* SecureStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStorageManager.swift; sourceTree = "<group>"; };
 		8CBCD073293B729700D1EF20 /* Web3TransactionsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Web3TransactionsHandler.swift; sourceTree = "<group>"; };
 		8CBCD076293B767000D1EF20 /* Web3DataComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Web3DataComposer.swift; sourceTree = "<group>"; };
@@ -198,7 +198,7 @@
 			children = (
 				8CBCD07C293BACC900D1EF20 /* Models */,
 				8CBCD073293B729700D1EF20 /* Web3TransactionsHandler.swift */,
-				8CBCD06D293A7EE800D1EF20 /* WalletConnectHandler.swift */,
+				8CBCD06D293A7EE800D1EF20 /* Web3AuthenticationHandler.swift */,
 				8CBCD076293B767000D1EF20 /* Web3DataComposer.swift */,
 				8CBCD078293B997B00D1EF20 /* Web3Coordinator.swift */,
 			);
@@ -428,7 +428,7 @@
 				8CBCD0C9293D7DD200D1EF20 /* MarketTableViewCell.swift in Sources */,
 				8CBCD0AA293C26D500D1EF20 /* Token.swift in Sources */,
 				8CBCD0B0293CDD1B00D1EF20 /* MainTabBarController.swift in Sources */,
-				8CBCD06E293A7EE800D1EF20 /* WalletConnectHandler.swift in Sources */,
+				8CBCD06E293A7EE800D1EF20 /* Web3AuthenticationHandler.swift in Sources */,
 				8CBCD0BE293CFDFC00D1EF20 /* CreateNFTViewController.swift in Sources */,
 				8CBCD072293AB5A500D1EF20 /* SecureStorageManager.swift in Sources */,
 				8CBCD03529394EF700D1EF20 /* SceneDelegate.swift in Sources */,

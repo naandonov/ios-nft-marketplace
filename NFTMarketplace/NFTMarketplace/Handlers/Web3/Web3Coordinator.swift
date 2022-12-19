@@ -27,14 +27,14 @@ final class Web3Coordinator {
     
     static let sharedInstance: Web3Coordinator = .init()
     
-    private let walletConnectHandler: WalletConnectHandler
+    private let walletConnectHandler: Web3AuthenticationHandler
     private let dataComposer: Web3DataComposer?
     private let transactionHandler: Web3TransactionsHandler
     
     weak var delegate: Web3CoordinatorDelegate?
     
     private init() {
-        walletConnectHandler = WalletConnectHandler()
+        walletConnectHandler = Web3AuthenticationHandler()
         dataComposer = .init()
         transactionHandler = .init()
         walletConnectHandler.delegate = self
@@ -58,7 +58,7 @@ final class Web3Coordinator {
 
 // MARK: - Web3 WalletConnectDelegate
 
-extension Web3Coordinator: WalletConnectDelegate {
+extension Web3Coordinator: Web3AuthenticationHandlerDelegate {
     func didFailToConnect() {
         delegate?.didFailToConnect(error: CustomError.general)
     }

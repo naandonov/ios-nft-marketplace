@@ -1,5 +1,5 @@
 //
-//  WalletConnectHandler.swift
+//  Web3AuthenticationHandler.swift
 //  NFTMarketplace
 //
 //  Created by Nikolay Andonov on 2.12.22.
@@ -8,13 +8,13 @@
 import Foundation
 import WalletConnectSwift
 
-protocol WalletConnectDelegate: AnyObject {
+protocol Web3AuthenticationHandlerDelegate: AnyObject {
     func didFailToConnect()
     func didConnect(with client: Client)
     func didDisconnect()
 }
 
-final class WalletConnectHandler {
+final class Web3AuthenticationHandler {
     enum WalletConnectError: Error {
         case invalidData
         case general
@@ -34,7 +34,7 @@ final class WalletConnectHandler {
     private var client: Client?
     private var session: Session?
     private(set) var pairingURI: WCURL?
-    weak var delegate: WalletConnectDelegate?
+    weak var delegate: Web3AuthenticationHandlerDelegate?
     
     func connect() throws -> String?  {
         if let session = SecureStorageManager.sharedInstance.read(service: Constants.sessionStorageService,
@@ -92,7 +92,7 @@ final class WalletConnectHandler {
 
 // MARK: - Utilities
 
-private extension WalletConnectHandler {
+private extension Web3AuthenticationHandler {
     private func generatePairingURI() throws -> WCURL {
         guard let bridgeURL = URL(string: Constants.bridgeURL) else {
             throw WalletConnectError.invalidData
@@ -117,7 +117,7 @@ private extension WalletConnectHandler {
 
 // MARK: - ClientDelegate
 
-extension WalletConnectHandler: ClientDelegate {
+extension Web3AuthenticationHandler: ClientDelegate {
     func client(_ client: Client, didFailToConnect url: WCURL) {
         SecureStorageManager.sharedInstance.delete(service: Constants.sessionStorageService,
                                                    account: Constants.sessionStorageAccount)
